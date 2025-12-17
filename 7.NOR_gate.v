@@ -3,5 +3,5 @@ module top_module(
     input b, 
     output out );
     
-    assign out = a | b;  //bitwise-OR (|) and logical-OR (||) operators, like C. 
+    assign out = !(a || b);  //bitwise-OR (|) and logical-OR (||) operators, like C. 
 endmodule
