@@ -1,4 +1,4 @@
-CIRCUIT LINK: https://hdlbits.01xz.net/mw/images/6/6a/Wiredecl1.png
+CIRCUIT LINK: https://hdlbits.01xz.net/wiki/File:Wiredecl2.png
 
 module top_module (
 	input a,
