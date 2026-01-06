@@ -4,13 +4,9 @@ module top_module(
     output [3:1] out_any,
     output [3:0] out_different );
    /*
-    Use bitwise operator and part to do the entire calculation in one line of code
-    in[3:1] is the vector:                 in[3]  in[2]  in[1]
-    in[2:0] is the vector:                 in[2]  in[1]  in[0]
-    Bitwise OR produces a threee bit vector |      |      |
-    Assign these three bit result to the out_any[3:1] : o_a[3] o_a[2] o_a[1]
-    
-    Thus, each output bit is the OR of the input bit and its neighour to the right
+   out_both: Each bit is 1 only if both a bit and its neighbor are 1 (bitwise AND).
+   out_any: Each bit is 1 if either a bit or its neighbor is 1 (bitwise OR).
+   out_different: Each bit is 1 if a bit differs from its rotated neighbor (bitwise XOR with right rotation).
     */
     assign out_any = in[3:1] | in[2:0];
     assign out_both = in[2:0] & in[3:1];
