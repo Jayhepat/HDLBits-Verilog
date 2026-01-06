@@ -1,0 +1,19 @@
+Create a one-bit wide, 2-to-1 multiplexer. When sel=0, choose a. When sel=1, choose b.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+module top_module(input a,
+                  input b,
+                  input sel,
+                  output out);
+
+assign out = (sel == 0 ? a : b);
+/*
+always @(*) begin
+        case(sel)
+            0 : out = a;
+            1 : out = b;
+        endcase
+    end
+    */
+endmodule
